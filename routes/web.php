@@ -25,23 +25,3 @@ Route::get('/animal/dolpin', [DolpinChildController::class, 'index'])->name('dol
 
 
 
-
-// Route::get('/posts', function () {
-//     return view('posts');
-// });
-
-// Route::get('/animals', function () {
-//     return view('animals');
-// });
-
-
-
-// Route::get('/about', function () {
-//     return view('about');
-// });
-
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
-
-

@@ -1,0 +1,88 @@
+.navbar{
+    background-color: rgb(110, 129, 104);
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+.login{
+    background-color: rgb(210, 243, 210);
+    color: rgb(15, 14, 14);
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+.login:hover{
+    background-color: rgb(97, 243, 89);
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+.nav-link{
+    color: blue;
+    font-weight: 500;
+    position: relative;
+}
+.nav-link:hover, .nav-link.active{
+    color: black;
+}
+@media(min-width: 991px){
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: rgb(25, 241, 76);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before, .nav-link.nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+.top {
+    margin-top: 10rem;
+}
+.card1, 
+.card2 {
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+.card1{
+    background-color: orange;
+    margin-bottom: 2rem;
+}
+.card2{
+    background-color: orange;
+}
+.card-title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.card-text{
+    margin-top: 2rem;
+    font-size: 20px;
+    font-weight: semibold;
+}
+.text{
+    margin-top: 2rem;
+    font-size: 20px !important;
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px 10px 10px;
+}
+.img-fluid{
+    width: 350px !important;
+    height: 350px !important;
+}

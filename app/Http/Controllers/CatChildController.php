@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class CatChildController extends Controller
 {
-    //index
     public function index(){
-        return view('ui_components/Home');
+        return view('ui_components/cat');
     }
 }

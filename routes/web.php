@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\Admin;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\BearChildController;
@@ -25,11 +26,11 @@ use App\Http\Controllers\WolfChildController;
 use App\Http\Controllers\ZebrasChildController;
 use Illuminate\Support\Facades\Route;
 // use
+Route::get('/login', [LoginController::class, 'login'])->name('login')->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'loginuser'])->name('mylogin');
+Route::post('/logout',  [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
+Route::middleware(['auth'])->group(function () {
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/animal', [AnimalController::class, 'index'])->name('animal');
 Route::get('/about', [AboutController::class, 'index']);
@@ -54,10 +55,9 @@ Route::get('/animal/cat', [CatChildController::class, 'index'])->name('cat.detai
 Route::get('/animal/nemo', [NemoChildController::class, 'index'])->name('nemo.detail');
 Route::get('/animal/pig', [PigChildController::class, 'index'])->name('pig.detail');
 Route::get('/animal/dog', [DogChildController::class, 'index'])->name('dog.detail');
+});
 
 
-
-Route::get('/login', [LoginController::class, 'login']);
 
 
 

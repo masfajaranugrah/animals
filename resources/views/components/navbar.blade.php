@@ -27,7 +27,15 @@
             </div>
         </div>
         <span class="dark-mode-toggle">🌙</span>
-        <a href="#" class="login"><b>Login</b></a>
+        <span>{{auth()->user()->name}}</span>
+
+        <form action="/logout"  method="post" class="logout">
+            @csrf
+              <button type="submit" class="btn btn-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </button>
+            </form>
+
 
         <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
